@@ -1,0 +1,74 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.btn{
+    width: 3em;
+    padding: 1px;
+    border-radius: 5px;
+}
+
+.btn-submit{
+    background-color: #24b817;
+}
+
+btn-delete{
+    background-color: tomato;
+}
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+
+/* editing content style */
+
+.content .header .banner{
+    padding: 10px;
+    margin: 5%;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: oblique;
+}
+
+.content .header .banner .title{
+    text-align: center;
+    font-style: normal;
+}
+
+.content .body{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 150px;
+    clear: both;
+}
+.content .body .main-content{
+    float: left;
+    width: 60%;
+    margin-left: 5%;
+    background-color: rgb(6, 240, 170);
+}
+
+.content .body .aside{
+    float: left;
+    margin-left: 5%;
+    width: 25%;
+    background: #24b817;
+}
+
+.content .footer{
+    clear: both;
+    margin-top: -5%;
+    margin-bottom: 0px;
+    padding-top: 5%;
+    max-height: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    background-color: #c90606;
+}
+

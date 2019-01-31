@@ -1,0 +1,187 @@
+/* core styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    width: 100%;
+    background: url("../img/administration-american-architecture-208703.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+label{
+    text-transform: capitalize;
+}
+
+div, label ,input{
+    margin: 1em;
+    height: auto;
+}
+
+button{
+    text-align: center;
+    margin: 2em;
+    border-radius: 10px;
+    border: 1px solid #333;
+    outline-style: none;
+    width: 150px;
+    height: auto;
+    padding: 0.5em 1em;
+    color: #fff;
+}
+
+header{
+    background: #333;
+    color: #fff;
+    width: 100%;
+}
+
+form{
+    border: 1px solid #333;
+    padding: 1em;
+    margin: 1em 0;
+    justify-content: center;
+    color: #fff;
+    background: #333;
+    border-radius: 10px;
+    position: relative;
+}
+
+form div{
+    display: grid;
+    text-align: left;
+}
+
+form div h2{
+    padding: 0 1em;
+}
+
+form div label{
+    margin: 0;
+    padding: 0 1em;
+    display: block;
+    clear: both;
+    justify-content: left;
+}
+
+form input{
+    display: block;
+}
+
+form button{
+    color: #fff;
+    background: blueviolet;
+}
+
+
+.main-nav{
+    display: none;
+}
+
+
+/* bug */
+
+.main-nav li a:hover, 
+.main-nav .logo a:hover,
+.main-nav .nav-items li:hover, 
+.main-nav .signups li:hover{
+    color: #333; 
+    background: #fff;
+}
+
+.main-content{
+    align-self: center;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 1em;
+}
+
+
+.footer{
+    background: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: -50px;
+    padding: 0.5em;
+    font-style: oblique;
+    width: 100%;
+    position: relative;
+}
+
+
+@media(min-width: 700px){
+    header{
+        display: block;
+        color: #fff;
+        background: #333;
+    }
+
+    form{
+        width: 450px;
+    }
+    
+    .main-nav{
+        display: flex;
+        width: 100%;
+    }
+
+    .main-nav .logo{
+        padding: 0 1em;
+        float: left;
+    }
+    
+    .main-nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .main-nav .nav-items li{
+        float: left;
+        padding: 1em;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    
+    
+    .main-nav .signups li{
+        align-self: right;
+        padding: 1em;
+        list-style-type: none;
+        text-decoration: none;
+    }
+    
+    .main-nav li a, 
+    .main-nav .logo a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .main-content{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        padding: 1em;
+        clear: both;
+    }
+
+    .main-content .login-form{
+        border: 1px solid #333;
+        padding: 1em 1em 1em;
+        margin: 1em 0;
+        justify-content: center;
+        color: #fff;
+        background: #333;
+        border-radius: 10px;
+        position: relative;
+        height: auto;
+    }
+}

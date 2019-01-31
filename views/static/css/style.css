@@ -68,6 +68,10 @@ form div label{
 
 form input{
     display: block;
+    border: 0px;
+    border-bottom: 1px solid #000;
+    background: transparent;
+    color: #fff;
 }
 
 form button{

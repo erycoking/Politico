@@ -137,6 +137,10 @@ form button{
     .main-nav .logo{
         padding: 0 1em;
         float: left;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1em;
+        border-right: 2px solid #fff; 
     }
     
     .main-nav ul{

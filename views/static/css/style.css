@@ -74,7 +74,7 @@ form input{
     color: #fff;
 }
 
-form button{
+button{
     color: #fff;
     background: blueviolet;
 }
@@ -115,6 +115,27 @@ form button{
     font-style: oblique;
     width: 100%;
     position: relative;
+}
+
+.parties ul li{
+    list-style: none;
+}
+
+
+.party{
+    max-height: 150px;
+    background: #333;
+    color: #fff;
+    display: inline-block;
+}
+
+.party img{
+    height: 100px;
+    width: 100px;
+}
+
+.party div{
+    float: left;
 }
 
 

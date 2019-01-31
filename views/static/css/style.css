@@ -138,6 +138,23 @@ button{
     float: left;
 }
 
+.options a{
+    display: block;
+    padding: .3em 0;
+    margin: 1em;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    width: 100px;
+}
+
+.options .btn-edit{
+    background: #990099;
+}
+.options .btn-delete{
+    background: #cc3300;
+}
+
 
 @media(min-width: 700px){
     header{

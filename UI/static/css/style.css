@@ -6,7 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     width: 100%;
-    background: url("../img/administration-american-architecture-208703.jpg");
+    background: url("../img/peace.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -15,7 +15,16 @@ label{
     text-transform: capitalize;
 }
 
-div, label ,input{
+.logo{
+    margin: 1em;
+}
+
+div{
+    margin-bottom: 1em;
+    height: auto;
+}
+
+label ,input{
     margin: 1em;
     height: auto;
 }
@@ -79,6 +88,88 @@ button{
     background: blueviolet;
 }
 
+/* styling voting page */
+
+.voting .voting-form{
+    border: 1px solid #333;
+    padding: 1em;
+    margin: 0;
+    justify-content: center;
+    color: #fff;
+    background: #333;
+    border-radius: 10px;
+    position: relative;
+}
+
+.voting .voting-form .post{
+    border-bottom: 1px solid #000;
+    margin-bottom: 1em;
+}
+
+.voting .voting-form .post .post-title{
+    text-align: center;
+}
+
+.voting .voting-form .post .candidates ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.voting .voting-form .post .candidates ul .box{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid #000;
+    outline: visible;
+    justify-content: center;
+    margin: 0;
+}
+
+.voting .voting-form .post .candidates ul .box .box-header{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.voting .voting-form .post .candidates ul .box .avater{
+    flex: 1;
+}
+
+.voting .voting-form .post .candidates ul .box .avater img{
+    width: 200px;
+    height: 200px;
+}
+
+.voting .voting-form .post .candidates ul .box .choice{
+    flex:1;
+    display: flex;
+    align-items: center;
+}
+
+.voting .voting-form .post .candidates ul .box .choice input{
+    flex: 1;
+}
+
+.voting .voting-form .post .candidates ul .box .choice span{
+    flex: 5;
+}
+
+.voting .voting-form p{
+    float: right;
+}
+
+.voting .voting-form p input{
+    border-bottom: 0;
+    width: 150px;
+    background:  #00cc66;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* styling navigations */
 
 .main-nav{
     display: none;
@@ -117,6 +208,8 @@ button{
     position: relative;
 }
 
+/* party display styling   */
+
 .parties ul li{
     list-style: none;
 }
@@ -152,9 +245,12 @@ button{
     background: #990099;
 }
 .options .btn-delete{
-    background: #cc3300;
+    background: #F02421;
 }
 
+
+
+/* responsiveness */
 
 @media(min-width: 700px){
     header{
@@ -165,6 +261,10 @@ button{
 
     form{
         width: 450px;
+    }
+
+    .voting-form{
+        width: 700px;
     }
     
     .main-nav{

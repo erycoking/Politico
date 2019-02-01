@@ -364,6 +364,23 @@ button{
 }
 
 
+/* admin candidate view page */
+
+.candidate-list table{
+    background: #333;
+    color: #fff;
+    margin: 1em;
+    padding: 2em;
+}
+
+.candidate-list table tr{
+}
+
+.candidate-list table tr td{
+    margin: 1em;
+    padding: 1em;
+}
+
 
 /* responsiveness */
 

@@ -248,6 +248,121 @@ button{
     background: #F02421;
 }
 
+/* election result view styling */
+
+.voting .voting-form .result .post{
+    border: 1px solid #000;
+}
+
+.voting .voting-form .post .candidates .polls{
+    display: flex;
+    flex-direction: column
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result{
+    display: flex;
+    align-content: center;
+    
+}
+.voting .voting-form .post .candidates ul .elections .vote-cast-result h4{
+    text-align: center;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results{
+    flex-grow: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul{
+    flex-grow: 1/1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li{
+    flex-grow: 1/1;
+    display: flex;
+    align-content: center;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant{
+    flex-grow: 1/1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    padding-left: 2em;
+    padding-top: 0;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-avater{
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-name{
+    flex: 1;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-score{
+    flex: 1;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant h4{
+    flex: 1;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-score h4 {
+    margin-top: 0;
+    padding-top: 0;;
+}
+
+
+
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    outline: visible;
+    border: 1px solid #000;
+    padding: 1em;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-header{
+    flex: 2;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater{
+    flex: 1;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-name{
+    flex: 1;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .heading {
+    font-style: oblique
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater img{
+    width: 100px;
+    height: 100px;
+}
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant-avater img{
+    width: 50px;
+    height: 50px;
+}
+
 
 
 /* responsiveness */
@@ -264,7 +379,7 @@ button{
     }
 
     .voting-form{
-        width: 700px;
+        width: 900px;
     }
     
     .main-nav{

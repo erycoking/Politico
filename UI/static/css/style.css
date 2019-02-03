@@ -8,7 +8,7 @@ body {
     width: 100%;
     background: url("../img/peace.jpg");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
 }
 
 label {

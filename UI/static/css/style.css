@@ -11,25 +11,26 @@ body {
     background-position: center;
 }
 
-label{
+label {
     text-transform: capitalize;
 }
 
-.logo{
+.logo {
     margin: 1em;
 }
 
-div{
+div {
     margin-bottom: 1em;
     height: auto;
 }
 
-label ,input{
+label,
+input {
     margin: 1em;
     height: auto;
 }
 
-button{
+button {
     text-align: center;
     margin: 2em;
     border-radius: 10px;
@@ -41,13 +42,13 @@ button{
     color: #fff;
 }
 
-header{
+header {
     background: #333;
     color: #fff;
     width: 100%;
 }
 
-form{
+form {
     border: 1px solid #333;
     padding: 1em;
     margin: 1em 0;
@@ -58,16 +59,16 @@ form{
     position: relative;
 }
 
-form div{
+form div {
     display: grid;
     text-align: left;
 }
 
-form div h2{
+form div h2 {
     text-align: center;
 }
 
-form div label{
+form div label {
     margin: 0;
     padding: 0 1em;
     display: block;
@@ -75,7 +76,7 @@ form div label{
     justify-content: left;
 }
 
-form input{
+form input {
     display: block;
     border: 0px;
     border-bottom: 1px solid #000;
@@ -83,14 +84,71 @@ form input{
     color: #fff;
 }
 
-button{
+button {
     color: #fff;
     background: blueviolet;
 }
 
+/* styling navigations */
+
+.main-nav {
+    display: inline-block;
+    width: 100%;
+}
+
+.main-nav .logo {
+    float: left;
+    font-weight: bold;
+    font-style: italic;
+
+}
+
+.main-nav .nav-items {
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.main-nav .nav-items .item {
+    align-content: center;
+    padding: 0 1em;
+}
+
+.main-nav a {
+    background: #333;
+    color: #fff;
+    padding: 0.5em 1.5em;
+    border-radius: 5px 0 0 5px;
+    text-decoration: none;
+    border-right: 2px solid #fff;
+}
+
+.main-nav a:hover {
+    color: #333;
+    background: #fff;
+}
+
+/* home page styling */
+.main-content .banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .banner .caption {
+    flex-grow: 1/1;
+    padding: 1em;
+    margin: 1em;
+    color: #fff;
+    background: #333
+}
+
+
 /* styling voting page */
 
-.voting .voting-form{
+.voting .voting-form {
     border: 1px solid #333;
     padding: 1em;
     margin: 0;
@@ -101,23 +159,23 @@ button{
     position: relative;
 }
 
-.voting .voting-form .post{
+.voting .voting-form .post {
     border-bottom: 1px solid #000;
     margin-bottom: 1em;
 }
 
-.voting .voting-form .post .post-title{
+.voting .voting-form .post .post-title {
     text-align: center;
 }
 
-.voting .voting-form .post .candidates ul{
+.voting .voting-form .post .candidates ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
     list-style: none;
 }
 
-.voting .voting-form .post .candidates ul .box{
+.voting .voting-form .post .candidates ul .box {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -127,66 +185,52 @@ button{
     margin: 0;
 }
 
-.voting .voting-form .post .candidates ul .box .box-header{
+.voting .voting-form .post .candidates ul .box .box-header {
     flex: 1;
     align-items: center;
     justify-content: center;
 }
 
-.voting .voting-form .post .candidates ul .box .avater{
+.voting .voting-form .post .candidates ul .box .avater {
     flex: 1;
 }
 
-.voting .voting-form .post .candidates ul .box .avater img{
+.voting .voting-form .post .candidates ul .box .avater img {
     width: 200px;
     height: 200px;
 }
 
-.voting .voting-form .post .candidates ul .box .choice{
-    flex:1;
+.voting .voting-form .post .candidates ul .box .choice {
+    flex: 1;
     display: flex;
     align-items: center;
 }
 
-.voting .voting-form .post .candidates ul .box .choice input{
+.voting .voting-form .post .candidates ul .box .choice input {
     flex: 1;
 }
 
-.voting .voting-form .post .candidates ul .box .choice span{
+.voting .voting-form .post .candidates ul .box .choice span {
     flex: 5;
 }
 
-.voting .voting-form p{
+.voting .voting-form p {
     float: right;
 }
 
-.voting .voting-form p input{
+.voting .voting-form p input {
     border-bottom: 0;
     width: 150px;
-    background:  #00cc66;
+    background: #00cc66;
     padding: 1em;
     border-radius: 5px;
     text-align: center;
 }
 
-/* styling navigations */
 
-.main-nav{
-    display: none;
-}
+/* styling main-content area */
 
-
-/* bug */
-
-.main-nav li a:hover, 
-.main-nav .logo a:hover,
-.main-nav .nav-items li:hover, 
-.main-nav .signups li:hover{
-    color: #333; 
-    background: #fff;
-}
-
-.main-content{
+.main-content {
     align-self: center;
     margin: 0;
     text-align: center;
@@ -197,7 +241,7 @@ button{
 }
 
 
-.footer{
+.footer {
     background: #333;
     color: #fff;
     text-align: center;
@@ -208,30 +252,72 @@ button{
     position: relative;
 }
 
+
+/* profile page */
+
+.main-content .profile{
+    background: #333;
+    color: #fff;
+    justify-content: center;
+}
+
+.main-content .profile .profile-table table{
+    width: 60vw;
+
+}
+
+.main-content .profile .profile-table table tr{
+    border: 1px solid #000;
+    height: 2em;
+}
+
+.main-content .profile .profile-table table tr .profile-link a{
+    color: #fff;
+    background: #990099;
+    text-decoration: none;
+    padding: 1em 2em;
+    margin: 1em 2em;
+    border-radius: 5px;
+}
+
 /* party display styling   */
 
-.parties ul li{
+.parties .add-party{
+    display: block;
+    margin: 2em 0;
+}
+
+.parties .add-party a{
+    text-decoration: none;
+    padding: 1em 2em;
+    color: #fff;
+    background: #990099;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.parties ul li {
     list-style: none;
 }
 
 
-.party{
+.party {
     max-height: 150px;
     background: #333;
     color: #fff;
     display: inline-block;
 }
 
-.party img{
+.party img {
     height: 100px;
     width: 100px;
 }
 
-.party div{
+.party div {
     float: left;
 }
 
-.options a{
+.options a {
     display: block;
     padding: .3em 0;
     margin: 1em;
@@ -241,53 +327,55 @@ button{
     width: 100px;
 }
 
-.options .btn-edit{
+.options .btn-edit {
     background: #990099;
 }
-.options .btn-delete{
+
+.options .btn-delete {
     background: #F02421;
 }
 
 /* election result view styling */
 
-.voting .voting-form .result .post{
+.voting .voting-form .result .post {
     border: 1px solid #000;
 }
 
-.voting .voting-form .post .candidates .polls{
+.voting .voting-form .post .candidates .polls {
     display: flex;
     flex-direction: column
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result {
     display: flex;
     align-content: center;
-    
+
 }
-.voting .voting-form .post .candidates ul .elections .vote-cast-result h4{
+
+.voting .voting-form .post .candidates ul .elections .vote-cast-result h4 {
     text-align: center;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results {
     flex-grow: 1/1;
     display: flex;
     flex-direction: column;
     align-content: center;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul {
     flex-grow: 1/1;
     display: flex;
     flex-wrap: wrap;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li {
     flex-grow: 1/1;
     display: flex;
     align-content: center;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant {
     flex-grow: 1/1;
     display: flex;
     flex-direction: column;
@@ -297,23 +385,23 @@ button{
     padding-top: 0;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-avater{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-avater {
     flex: 1;
     align-content: center;
     justify-content: center;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-name{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-name {
     flex: 1;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-score{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-score {
     flex: 1;
     margin-top: 0;
     padding-top: 0;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant h4{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant h4 {
     flex: 1;
     text-align: center;
     margin-top: 0;
@@ -322,13 +410,14 @@ button{
 
 .voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-score h4 {
     margin-top: 0;
-    padding-top: 0;;
+    padding-top: 0;
+    ;
 }
 
 
 
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen {
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -337,15 +426,15 @@ button{
     padding: 1em;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-header{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-header {
     flex: 2;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater {
     flex: 1;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-name{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-name {
     flex: 1;
 }
 
@@ -353,30 +442,51 @@ button{
     font-style: oblique
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater img{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater img {
     width: 100px;
     height: 100px;
 }
 
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant-avater img{
+.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant-avater img {
     width: 50px;
     height: 50px;
 }
 
 
-/* admin candidate view page */
+/* candidate view page */
 
-.candidate-list table{
+.candidate-list .candidate-table img {
+    width: 50px;
+    height: 50px;
+}
+
+.candidate-list .candidate-table {
     background: #333;
     color: #fff;
     margin: 1em;
     padding: 2em;
 }
 
-.candidate-list table tr{
+.candidate-register {
+    flex-flow: 1/1;
+    margin: 1em;
 }
 
-.candidate-list table tr td{
+.candidate-register .link {
+    float: left;
+}
+
+.candidate-register .link a {
+    padding: 1em;
+    color: #fff;
+    background: #990099;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+
+.candidate-list .candidate-table tr td {
     margin: 1em;
     padding: 1em;
 }
@@ -384,62 +494,64 @@ button{
 
 /* responsiveness */
 
-@media(min-width: 700px){
-    header{
+@media(min-width: 700px) {
+    header {
         display: block;
         color: #fff;
         background: #333;
     }
 
-    form{
+    form {
         width: 450px;
     }
 
-    .voting-form{
+    .voting-form {
         width: 900px;
     }
-    
-    .main-nav{
-        display: flex;
+
+    .main-nav {
+        display: inline-block;
         width: 100%;
     }
 
-    .main-nav .logo{
+    .main-nav .logo {
         padding: 0 1em;
         float: left;
         font-weight: bold;
         font-style: italic;
-        font-size: 1em;
-        border-right: 2px solid #fff; 
-    }
-    
-    .main-nav ul{
-        margin: 0;
-        padding: 0;
-    }
-    
-    .main-nav .nav-items li{
-        float: left;
-        padding: 1em;
-        list-style-type: none;
-        text-decoration: none;
-    }
-    
-    
-    .main-nav .signups li{
-        align-self: right;
-        padding: 1em;
-        list-style-type: none;
-        text-decoration: none;
-    }
-    
-    .main-nav li a, 
-    .main-nav .logo a{
-        text-decoration: none;
-        color: #fff;
+
     }
 
-    .main-content{
+    .main-nav .nav-items {
+        float: right;
+        display: flex;
+        list-style-type: none;
+        text-decoration: none;
+    }
+
+    .main-nav .nav-items .item {
+        align-content: center;
+        margin-left: 0;
+    }
+
+    .main-nav a {
+        background: #333;
+        color: #fff;
+        padding: 0.5em 1.5em;
+        border-radius: 5px 0 0 5px;
+        text-decoration: none;
+        border-right: 2px solid #fff;
+    }
+
+    .main-nav a:hover {
+        background: #fff;
+        color: #333;
+    }
+
+
+    /* styling main-content area */
+
+    .main-content {
         display: flex;
         justify-content: center;
         margin: 0;
@@ -451,7 +563,7 @@ button{
         clear: both;
     }
 
-    .main-content .login-form{
+    .main-content .login-form {
         border: 1px solid #333;
         padding: 1em 1em 1em;
         margin: 1em 0;
@@ -461,5 +573,41 @@ button{
         border-radius: 10px;
         position: relative;
         height: auto;
+    }
+
+    /* candidate view page */
+
+    .candidate-list .candidate-table img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .user-view-candidates .candidate-list .candidate-table {
+        background: #333;
+        color: #fff;
+        margin: 1em;
+        padding: 2em;
+        width: 90vw;
+        border-radius: 5px;
+        table-layout: auto;
+    }
+
+    .user-view-candidates .candidate-register {
+        width: 90vw;
+        padding: 1em;
+        margin: 2em 1em;
+    }
+
+    .user-view-candidates .candidate-register .link {
+        display: block;
+    }
+
+    .user-view-candidates .candidate-register .link a {
+        padding: 1em;
+        color: #fff;
+        background: #990099;
+        border-radius: 5px;
+        text-decoration: none;
+        width: 100vh;
     }
 }

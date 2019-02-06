@@ -258,17 +258,24 @@ button {
 .main-content .profile{
     background: #333;
     color: #fff;
-    justify-content: center;
+    justify-content: left;
 }
 
 .main-content .profile .profile-table table{
     width: 60vw;
+    text-align: left;
+    padding-left: 5em;
+    padding-bottom: 2em;
 
 }
 
 .main-content .profile .profile-table table tr{
     border: 1px solid #000;
     height: 2em;
+}
+
+.main-content .profile .profile-table table tr .profile-link{
+    padding-top: 2em;
 }
 
 .main-content .profile .profile-table table tr .profile-link a{

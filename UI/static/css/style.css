@@ -6,9 +6,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
     width: 100%;
-    background: url("../img/peace.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: royalblue;
 }
 
 label {
@@ -30,7 +28,7 @@ input {
     height: auto;
 }
 
-button {
+button, .button-btn {
     text-align: center;
     margin: 2em;
     border-radius: 10px;
@@ -84,7 +82,7 @@ form input {
     color: #fff;
 }
 
-button {
+button, .btn {
     color: #fff;
     background: blueviolet;
 }
@@ -143,6 +141,19 @@ button {
     margin: 1em;
     color: #fff;
     background: #333
+}
+
+.main-content .banner .caption {
+    width: 70vw;
+    font-style: oblique;
+}
+
+.main-content .banner .core{
+    display: inline-block;
+}
+
+.main-content .banner .core .core-values li{
+    text-align: left;
 }
 
 
@@ -302,15 +313,32 @@ button {
 
 
 .party {
+    width: 80vw;
     max-height: 150px;
     background: #333;
     color: #fff;
-    display: inline-block;
+    display: flex;
 }
 
 .party img {
     height: 100px;
     width: 100px;
+}
+
+.party .icon {
+    flex: 1;
+    justify-content: flex-start;
+}
+
+.party .desc {
+    flex: 1;
+    justify-content: center;
+}
+
+.party .join {
+    flex: 1;
+    justify-content: flex-end;
+
 }
 
 .party div {
@@ -609,5 +637,9 @@ button {
         border-radius: 5px;
         text-decoration: none;
         width: 100vh;
+    }
+
+    .main-content .partiesu ul{
+        width: 70vw
     }
 }

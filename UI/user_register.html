@@ -24,13 +24,13 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="dashboard.html" method="get">
+            <form action="dashboard.html" method="get" name="user" onsubmit="return userSignUp()">
                 <div>
                     <h2>Sign Up</h2>
                 </div>
                 <div>
                     <label for="fname">First name:</label>
-                    <input type="text" name="fname" id="fname">
+                    <input type="text" name="fname" id="fname" required>
                 </div>
                 <div>
                     <label for="mname">Middle name:</label>
@@ -38,43 +38,39 @@
                 </div>
                 <div>
                     <label for="lname">Last name:</label>
-                    <input type="text" name="lname" id="lname">
+                    <input type="text" name="lname" id="lname" required>
                 </div>
                 <div>
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username">
+                    <input type="text" id="username" name="username" required>
                 </div>
                 <div>
                     <label for="email">Email:</label>
-                    <input type="text" name="email" id="email">
+                    <input type="text" name="email" id="email" required>
                 </div>
                 <div>
-                    <label for="county">County:</label>
-                    <input type="text" name="county" id="county">
+                    <label for="idNo">ID Number:</label>
+                    <input type="text" name="idNo" id="idNo" required>
                 </div>
                 <div>
-                    <label for="Constituency">Constituency:</label>
-                    <input type="text" name="Constituency" id="Constituency">
+                    <label for="passport_url">Passport URL:</label>
+                    <input type="text" name="passport_url" id="passport_url" required placeholder="eg. http://passports.com/passport199.png">
                 </div>
                 <div>
-                    <label for="ward">Ward:</label>
-                    <input type="text" name="ward" id="ward">
-                </div>
-                <div>
-                    <label for="age">Age:</label>
-                    <input type="text" name="age" id="age">
-                </div>
-                <div>
-                    <label for="gender">Gender:</label>
-                    <input type="text" name="gender" id="gender">
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="text" name="phone_number" id="phone_number" required placeholder="eg. 254734567876">
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="text" id="password" name="password">
+                    <input type="text" id="password" name="password" required>
+                </div>
+                <div>
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="text" id="cpassword" name="cpassword" required>
                 </div>
                 <button type="submit">Sign up</button>
                 <div>
-                    <p>Do you have an a acount<a href="user_login.html" class=" button-btn btn">Sign In</a></p>
+                    <p>Do you have an acount<a href="user_login.html" class=" button-btn btn">Sign In</a></p>
                 </div>
             </form>
         </div>

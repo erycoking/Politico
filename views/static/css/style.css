@@ -55,7 +55,7 @@ form div{
 }
 
 form div h2{
-    text-align: center;
+    padding: 0 1em;
 }
 
 form div label{
@@ -68,13 +68,9 @@ form div label{
 
 form input{
     display: block;
-    border: 0px;
-    border-bottom: 1px solid #000;
-    background: transparent;
-    color: #fff;
 }
 
-button{
+form button{
     color: #fff;
     background: blueviolet;
 }
@@ -117,44 +113,6 @@ button{
     position: relative;
 }
 
-.parties ul li{
-    list-style: none;
-}
-
-
-.party{
-    max-height: 150px;
-    background: #333;
-    color: #fff;
-    display: inline-block;
-}
-
-.party img{
-    height: 100px;
-    width: 100px;
-}
-
-.party div{
-    float: left;
-}
-
-.options a{
-    display: block;
-    padding: .3em 0;
-    margin: 1em;
-    border-radius: 5px;
-    color: #fff;
-    text-decoration: none;
-    width: 100px;
-}
-
-.options .btn-edit{
-    background: #990099;
-}
-.options .btn-delete{
-    background: #cc3300;
-}
-
 
 @media(min-width: 700px){
     header{
@@ -175,10 +133,6 @@ button{
     .main-nav .logo{
         padding: 0 1em;
         float: left;
-        font-weight: bold;
-        font-style: italic;
-        font-size: 1em;
-        border-right: 2px solid #fff; 
     }
     
     .main-nav ul{

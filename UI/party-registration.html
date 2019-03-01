@@ -39,29 +39,21 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="admin_view_parties.html" method="get" class="party-registration-form">
+            <form action="admin_view_parties.html" method="get" class="party-registration-form" name="party">
                 <div>
                     <h2 class="party-registration-title">Enter Party Details</h2>
                 </div>
                 <div>
-                    <label for="partyname">Party Name</label>
-                    <input type="text" id="partyname" name="partyname">
+                    <label for="party_name">Party Name</label>
+                    <input type="text" id="partyname" name="party_name" required>
                 </div>
                 <div>
-                    <label for="pleader">Party leader</label>
-                    <input type="text" id="pleader" name="pleader">
+                    <label for="party_address">Party Address</label>
+                    <input type="text" id="party_address" name="party_address" required placeholder="eg. Kasarani, Nairobi">
                 </div>
                 <div>
-                    <label for="psecgen">Party Secretary General</label>
-                    <input type="text" id="psecgen" name="psecgen">
-                </div>
-                <div>
-                    <label for="noOfNumbers">Number of Members</label>
-                    <input type="text" id="noOfNumbers" name="noOfNumbers">
-                </div>
-                <div>
-                    <label for="dateFormed">Date Formed</label>
-                    <input type="text" id="dateFormed" name="dateFormed">
+                    <label for="party_logo">Party logo URL</label>
+                    <input type="text" id="party_logo" name="party_logo" required placeholder="eg. http://passports.com/passport199.png">
                 </div>
                 <button type="submit" class="btn-submit">Register Party</button>
             </form>

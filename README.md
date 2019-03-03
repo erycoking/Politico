@@ -28,4 +28,4 @@ To view use the click [Here!](https://erycoking.github.io/Politico/UI/user_login
   - run for office
   - vote
 
-##### Bear in mind that the system is still under development, you can only use it for production at you own risk
+##### *Disclaimer* : Bear in mind that the system is still under development, you can only use it for production at you own risk

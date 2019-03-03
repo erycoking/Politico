@@ -164,9 +164,9 @@ function userLogin(){
                 var is_admin = user.data[0].user.is_admin;
                 sessionStorage.setItem('is_admin', is_admin);
                 if (is_admin){
-                    location.replace("admin_dashboard.html");
+                    location.replace("admin/admin_dashboard.html");
                 }else{
-                    location.replace("dashboard.html");
+                    location.replace("voters/dashboard.html");
                 }
             }else{
                 alert(user.error);

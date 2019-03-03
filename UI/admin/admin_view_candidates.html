@@ -5,43 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politico | Sign Up</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
     <div class="content">
         <header>
             <nav class="main-nav">
-                <div class="logo"><a href="index.html">Politico</a></div>
+                <div class="logo"><a href="../index.html">Politico</a></div>
                 <ul class="nav-items">
                     <li class="item">
-                        <a href="user_view_parties.html">Parties</a>
+                        <a href="admin_view_offices.html">Political Seats</a>
                     </li>
                     <li class="item">
-                        <a href="user_view_candidates.html">Candidate</a>
+                        <a href="admin_view_parties.html">Parties</a>
                     </li>
                     <li class="item">
-                        <a href="voting.html">Vote</a>
+                        <a href="admin_view_candidates.html">Candidates</a>
                     </li>
                     <li class="item">
-                        <a href="view_election_results.html">Election Results</a>
+                        <a href="admin_voting.html">Vote</a>
                     </li>
                     <li class="item">
-                        <a href="my_profile.html">Profile</a>
+                        <a href="admin_view_election_results.html">Election Results</a>
                     </li>
                     <li class="item">
-                        <a href="index.html" class='btn-signup' id="signout"> Sign Out</a>
+                        <a href="admin_view_my_profile.html">Profile</a>
+                    </li>
+                    <li class="item">
+                        <a href="../index.html" class='btn-signup' id="signout"> Sign Out</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <div class="main-content">
             <div class="user-view-candidates">
-                <div class="candidate-register">
-                    <div class="link">
-                        <a href="candidate_registration.html">Become a candidate</a>
-                    </div>
-                </div>
                 <div class="candidate-list">
                     <table class="candidate-table">
                         <thead>
@@ -49,6 +47,7 @@
                                 <th>Photo</th>
                                 <th>Name</th>
                                 <th>party</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -56,58 +55,99 @@
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Raila</td>
                                 <td>ODM.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Kalonzo</td>
                                 <td>Wiper.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Uhuru</td>
                                 <td>Jubilee.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Ruto</td>
                                 <td>URP.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Orengo</td>
                                 <td>ODM.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Keter.</td>
                                 <td>Jubilee.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Kutuny</td>
                                 <td>Jubilee.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Millie.</td>
                                 <td>ODM.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Matiangi</td>
                                 <td>Jubilee.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
                             </tr>
                             <tr>
                                 <td><img src="static/img/avater.png" alt=""></td>
                                 <td>Katoo</td>
                                 <td>Jubilee.</td>
+                                <td>
+                                    <a href="edit_political_party.html">Edit</a> |
+                                    <a href="#">Delete</a>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
-    <script src="static/js/index.js"></script>
+    <script src="../static/js/index.js"></script>
 </body>
 
 </html>

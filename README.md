@@ -1,7 +1,7 @@
 # Politico
 A system that can be used to conduct elections.
 
-To view use the click [Here!](https://erycoking.github.io/Politico/UI/user_login.html)
+To view use the click [Here](https://erycoking.github.io/Politico/UI/user_login.html)
 
 ## It allows three types of users, namely:
 - Voter(normal users)

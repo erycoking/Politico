@@ -1,6 +1,5 @@
 
 var token = sessionStorage.token;
-console.log(token);
 if (!token){
     location.assign("user_login.html");
 }

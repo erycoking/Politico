@@ -39,7 +39,7 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="admin_view_parties.html" method="get" class="party-registration-form" name="party">
+            <form action="admin_view_parties.html" method="get" class="party-registration-form" name="party" onsubmit="return registerParty()">
                 <div>
                     <h2 class="party-registration-title">Enter Party Details</h2>
                 </div>
@@ -61,7 +61,7 @@
 
     </div>
     <script src="static/js/index.js"></script>
-    <script src="static/js/pages/parties.js"></script>
+    <script src="static/js/pages/party/parties.js"></script>
 </body>
 
 </html>

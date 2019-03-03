@@ -24,7 +24,7 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="dashboard.html" method="get" name="user" onsubmit="return userSignUp()">
+            <form action="dashboard.html" method="POST" name="user" onsubmit="return userSignUp()">
                 <div>
                     <h2>Sign Up</h2>
                 </div>
@@ -62,11 +62,11 @@
                 </div>
                 <div>
                     <label for="password">Password</label>
-                    <input type="text" id="password" name="password" required>
+                    <input type="password" id="password" name="password" required>
                 </div>
                 <div>
                     <label for="cpassword">Confirm Password</label>
-                    <input type="text" id="cpassword" name="cpassword" required>
+                    <input type="password" id="cpassword" name="cpassword" required>
                 </div>
                 <button type="submit">Sign up</button>
                 <div>
@@ -75,7 +75,7 @@
             </form>
         </div>
     </div>
-    <script src="static/js/index.js"></script>
+    <script src="static/js/pages/users.js"></script>
 </body>
 
 </html>

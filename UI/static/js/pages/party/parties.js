@@ -38,7 +38,33 @@ function registerParty(){
         "name": party_name.value
     };
 
-    console.log(party_data);
+    var url = "https://politico-api-version-2.herokuapp.com/api/v2/parties";
+    var token = sessionStorage.token;
 
-    history.back();
+    fetch(url, {
+        method: 'POST', 
+        mode: "cors",
+        body: JSON.stringify(party_data), 
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    })
+    .then(res => res.json())
+    .then(party => {
+        if (party.status == 201){
+            confirm("party added with id: "+ party.data[0].id);
+            history.back();
+            return true;
+        }else{
+            return false;
+        }
+    })
+    .catch(e => {
+        console.log(e);
+        confirm(e.message);
+        return false;
+    });
+
+    return false;
 }

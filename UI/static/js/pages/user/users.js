@@ -103,8 +103,6 @@ function userSignUp() {
         "username": username.value
     };
 
-    console.log(user_data);
-
     signup_url = "https://politico-api-version-2.herokuapp.com/api/v2/auth/signup";
     fetch(signup_url, {
         method: 'POST', 
@@ -116,19 +114,18 @@ function userSignUp() {
     })
     .then(res => res.json())
     .then(user => {
-        console.log(user);
         if(user.status == 200){
             sessionStorage.setItem('token', user.data[0].token);
+            sessionStorage.setItem('is_admin', user.data[0].user.is_admin);
             location.replace("dashboard.html");
-            return true;
         }else{
-            confirm(user.error);
+            alert(user.error);
             return false;
         }
     })
     .catch(e => {
         console.log(e);
-        confirm(e.message);
+        alert(e.message);
         return false;
     });
 
@@ -151,8 +148,6 @@ function userLogin(){
             "password": password.value
         };
 
-        console.log(user_credentials);
-
         login_url = "https://politico-api-version-2.herokuapp.com/api/v2/auth/login";
         fetch(login_url, {
             method: 'POST', 
@@ -164,13 +159,17 @@ function userLogin(){
         })
         .then(res => res.json())
         .then(user => {
-            console.log(user);
             if(user.status == 200){
                 sessionStorage.setItem('token', user.data[0].token);
-                location.replace("dashboard.html");
-                return true;
+                var is_admin = user.data[0].user.is_admin;
+                sessionStorage.setItem('is_admin', is_admin);
+                if (is_admin){
+                    location.replace("admin_dashboard.html");
+                }else{
+                    location.replace("dashboard.html");
+                }
             }else{
-                confirm(user.error);
+                alert(user.error);
                 return false;
             }
         })

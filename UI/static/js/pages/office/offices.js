@@ -30,7 +30,34 @@ function registerOffice(){
     };
 
     console.log(office_data);
-    
 
-    history.back();
+    var url = "https://politico-api-version-2.herokuapp.com/api/v2/offices";
+    var token = sessionStorage.token;
+
+    fetch(url, {
+        method: 'POST', 
+        mode: "cors",
+        body: JSON.stringify(office_data), 
+        headers: {
+            'Content-type': 'application/json',
+            'Authorization': 'Bearer ' + token
+        }
+    })
+    .then(res => res.json())
+    .then(office => {
+        if (office.status == 201){
+            confirm("office added with id: "+ office.data[0].id);
+            history.back();
+            return true;
+        }else{
+            return false;
+        }
+    })
+    .catch(e => {
+        console.log(e);
+        confirm(e.message);
+        return false;
+    });
+
+    return false;
 }

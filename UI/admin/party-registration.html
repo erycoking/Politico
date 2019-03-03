@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politico | Sign In</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
     <div class="content">
         <header>
             <nav class="main-nav">
-                <div class="logo"><a href="index.html">Politico</a></div>
+                <div class="logo"><a href="../index.html">Politico</a></div>
                 <ul class="nav-items">
                     <li class="item">
-                        <a href="admin_view_candidates.html">Political Seats</a>
+                        <a href="admin_view_offices.html">Political Seats</a>
                     </li>
                     <li class="item">
                         <a href="admin_view_parties.html">Parties</a>
@@ -24,28 +24,28 @@
                         <a href="admin_view_candidates.html">Candidates</a>
                     </li>
                     <li class="item">
-                        <a href="voting.html">Vote</a>
+                        <a href="admin_voting.html">Vote</a>
                     </li>
                     <li class="item">
-                        <a href="view_election_results.html">Election Results</a>
+                        <a href="admin_view_election_results.html">Election Results</a>
                     </li>
                     <li class="item">
-                        <a href="my_profile.html">Profile</a>
+                        <a href="admin_view_my_profile.html">Profile</a>
                     </li>
                     <li class="item">
-                        <a href="index.html" class='btn-signup' id="signout"> Sign Out</a>
+                        <a href="../index.html" class='btn-signup' id="signout"> Sign Out</a>
                     </li>
                 </ul>
             </nav>
         </header>
         <div class="main-content">
-            <form action="admin_view_parties.html" method="get" class="edit-political-party-form" name="editPartyForm" onsubmit="return editParty()">
+            <form action="admin_view_parties.html" method="get" class="party-registration-form" name="party" onsubmit="return registerParty()">
                 <div>
                     <h2 class="party-registration-title">Enter Party Details</h2>
                 </div>
                 <div>
                     <label for="party_name">Party Name</label>
-                    <input type="text" id="partyname" name="party_name" disabled>
+                    <input type="text" id="partyname" name="party_name" required>
                 </div>
                 <div>
                     <label for="party_address">Party Address</label>
@@ -55,14 +55,13 @@
                     <label for="party_logo">Party logo URL</label>
                     <input type="text" id="party_logo" name="party_logo" required placeholder="eg. http://passports.com/passport199.png">
                 </div>
-                <button type="submit" class="btn-submit">Save</button>
-                <button type="button" id="btn-view-parties">Back</button>
+                <button type="submit" class="btn-submit">Register Party</button>
             </form>
         </div>
 
     </div>
-    <script src="static/js/index.js"></script>
-    <script src="static/js/pages/party/edit_party.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/pages/party/parties.js"></script>
 </body>
 
 </html>

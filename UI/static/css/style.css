@@ -649,4 +649,12 @@ button, .btn {
     .main-content .partiesu ul{
         width: 70vw
     }
+
+    a.btn-delete,  a.btn-edit {
+        padding: 0.5em;
+        color: #fff;
+        background: #990099;
+        border-radius: 5px;
+        text-decoration: none;
+    }
 }

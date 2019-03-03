@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politico | Sign In</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
 <body>
     <div class="content">
         <header>
             <nav class="main-nav">
-                <div class="logo"><a href="index.html">Politico</a></div>
+                <div class="logo"><a href="../index.html">Politico</a></div>
                 <ul class="nav-items">
                     <li class="item">
-                        <a href="admin_view_candidates.html">Political Seats</a>
+                        <a href="admin_view_offices.html">Political Seats</a>
                     </li>
                     <li class="item">
                         <a href="admin_view_parties.html">Parties</a>
@@ -24,16 +24,16 @@
                         <a href="admin_view_candidates.html">Candidates</a>
                     </li>
                     <li class="item">
-                        <a href="voting.html">Vote</a>
+                        <a href="admin_voting.html">Vote</a>
                     </li>
                     <li class="item">
-                        <a href="view_election_results.html">Election Results</a>
+                        <a href="admin_view_election_results.html">Election Results</a>
                     </li>
                     <li class="item">
-                        <a href="my_profile.html">Profile</a>
+                        <a href="admin_view_my_profile.html">Profile</a>
                     </li>
                     <li class="item">
-                        <a href="index.html" class='btn-signup'> Sign Out</a>
+                        <a href="../index.html" class='btn-signup' id="signout"> Sign Out</a>
                     </li>
                 </ul>
             </nav>
@@ -44,17 +44,17 @@
                     <h2 class="office-registration-title">Enter Political Office Details</h2>
                 </div>
                 <div>
-                    <label for="office_name">Office Name</label>
-                    <input type="text" id="office_name" name="office_name">
+                    <label for="office_name">Office name</label>
+                    <input type="text" id="office_name" name="office_name" placeholder="Office Name">
                 </div>
                 <div>
-                    <label for="office_type">Select office type</label>
-                    <select type="text" value="" name="office_type" id="office_type"> 
-                        <option>---select office type---</option> 
-                        <option>local government</option> 
-                        <option>state</option> 
-                        <option>federal</option> 
-                        <option>legislative</option> 
+                    <label for="office_type">Office Type</label>
+                    <select type="text" value="" name="office_type" id="office_type">
+                        <option>-------- select office type --------</option>
+                        <option>local government</option>
+                        <option>state</option>
+                        <option>federal</option>
+                        <option>legislative</option>
                     </select>
                 </div>
                 <button type="submit" class="btn-submit">Register Office</button>
@@ -62,8 +62,8 @@
         </div>
 
     </div>
-    <script src="static/js/index.js"></script>
-    <script src="static/js/pages/office/offices.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/pages/office/offices.js"></script>
 </body>
 
 </html>

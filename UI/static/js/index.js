@@ -1,7 +1,7 @@
 
 var token = sessionStorage.token;
 if (!token){
-    location.assign("user_login.html");
+    location.assign("../user_login.html");
 }
 
 var signout = document.getElementById("signout");

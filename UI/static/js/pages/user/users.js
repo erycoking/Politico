@@ -8,7 +8,7 @@ const username_pattern = /^\w{3,25}$/;
 const email_pattern = /^[^@]+@[^@]+\.[^@]+$/;
 const phone_pattern = /^(2547|07)\d{8}$/;
 const idNo_pattern = /^\d{4,20}$/;
-const image_url_pattern = /^https?:\/\/(www\.)?(\w+)(\.\w+)\/(\w+\/)*(\w+\.)(jpeg|png|jpg)$/;
+const image_url_pattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 const passwd_pattern = /^.{8,}$/;
 
 /**
@@ -161,6 +161,9 @@ function userLogin(){
         .then(user => {
             if(user.status == 200){
                 sessionStorage.setItem('token', user.data[0].token);
+                var current_user = JSON.stringify(user.data[0].user);
+                console.log(current_user);
+                sessionStorage.setItem('current_user', current_user);
                 var is_admin = user.data[0].user.is_admin;
                 sessionStorage.setItem('is_admin', is_admin);
                 if (is_admin){

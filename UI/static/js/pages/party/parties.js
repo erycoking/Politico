@@ -3,7 +3,7 @@
  */
 const fullname_pattern = /^[a-zA-Z]{2,25}( [a-zA-Z]{2,25})*$/;
 const address_pattern = /^[a-zA-Z0-9]{2,25}([.,]?( [a-zA-Z0-9]{2,25})*.?)*$/;
-const image_url_pattern = /^https?:\/\/(www\.)?(\w+)(\.\w+)\/(\w+\/)*(\w+\.)(jpeg|png|jpg)$/;
+const image_url_pattern = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|www\.)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 
 /**
  * party registration

@@ -1,6 +1,6 @@
-window.onload = load_parties();
+window.onload = load_offices();
 
-function load_parties() {
+function load_offices() {
     var url = "https://politico-api-version-2.herokuapp.com/api/v2/offices";
     var token = sessionStorage.token;
 
@@ -17,7 +17,7 @@ function load_parties() {
             if (offices.status == 200) {
                 var output = '';
                 data = offices.data;
-                if (data){
+                if (data.length > 0){
                     data.forEach(function (office) {
                         var is_admin = sessionStorage.is_admin;
                         if (is_admin == 'true') {
@@ -63,6 +63,9 @@ function load_parties() {
                     sessionStorage.removeItem("delete_office_msg");
                 }
 
+            }else{
+                console.log(offices.error);
+                confirm(offices.error);
             }
 
         })

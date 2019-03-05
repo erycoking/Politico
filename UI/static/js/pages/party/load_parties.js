@@ -17,44 +17,48 @@ function load_parties() {
             if (parties.status == 200) {
                 var output = '';
                 data = parties.data;
-                data.forEach(function (pty) {
-                    var is_admin = sessionStorage.is_admin;
-                    if (is_admin == 'true') {
-                        output += `
-                         <li>
-                            <div class="party">
-                                <div class="icon">
-                                    <!-- <img src="${pty.logo_url}" alt="jubilee_logo"> -->
-                                    <img src="https://seeklogo.com/images/J/jubilee-party-kenya-logo-E83509A451-seeklogo.com.png" alt="jubilee_logo">
+                if (data.length > 0){
+                    data.forEach(function (pty) {
+                        var is_admin = sessionStorage.is_admin;
+                        if (is_admin == 'true') {
+                            output += `
+                             <li>
+                                <div class="party">
+                                    <div class="icon">
+                                        <!-- <img src="${pty.logo_url}" alt="jubilee_logo"> -->
+                                        <img src="https://seeklogo.com/images/J/jubilee-party-kenya-logo-E83509A451-seeklogo.com.png" alt="jubilee_logo">
+                                    </div>
+                                    <div class="desc">
+                                        <p><strong>Name :: <strong/> ${pty.name}</p>
+                                        <p><strong>Address :: <strong/> ${pty.hq_address}</p> 
+                                    </div>
+                                    <div class="options">
+                                        <a href="https://politico-api-version-2.herokuapp.com/api/v2/parties/${pty.id}" class="btn-edit">Edit</a>
+                                        <a href="https://politico-api-version-2.herokuapp.com/api/v2/parties/${pty.id}" class="btn-delete">Delete</a> 
+                                    </div>
                                 </div>
-                                <div class="desc">
-                                    <p><strong>Name :: <strong/> ${pty.name}</p>
-                                    <p><strong>Address :: <strong/> ${pty.hq_address}</p> 
+                            </li>
+                        `;
+                        } else {
+                            output += `
+                             <li>
+                                <div class="party">
+                                    <div class="icon">
+                                        <!-- <img src="${pty.logo_url}" alt="jubilee_logo"> -->
+                                        <img src="https://seeklogo.com/images/J/jubilee-party-kenya-logo-E83509A451-seeklogo.com.png" alt="jubilee_logo">
+                                    </div>
+                                    <div class="desc">
+                                        <p><strong>Name :: <strong/> ${pty.name}</p>
+                                        <p><strong>Address :: <strong/> ${pty.hq_address}</p> 
+                                    </div>
                                 </div>
-                                <div class="options">
-                                    <a href="https://politico-api-version-2.herokuapp.com/api/v2/parties/${pty.id}" class="btn-edit">Edit</a>
-                                    <a href="https://politico-api-version-2.herokuapp.com/api/v2/parties/${pty.id}" class="btn-delete">Delete</a> 
-                                </div>
-                            </div>
-                        </li>
-                    `;
-                    } else {
-                        output += `
-                         <li>
-                            <div class="party">
-                                <div class="icon">
-                                    <!-- <img src="${pty.logo_url}" alt="jubilee_logo"> -->
-                                    <img src="https://seeklogo.com/images/J/jubilee-party-kenya-logo-E83509A451-seeklogo.com.png" alt="jubilee_logo">
-                                </div>
-                                <div class="desc">
-                                    <p><strong>Name :: <strong/> ${pty.name}</p>
-                                    <p><strong>Address :: <strong/> ${pty.hq_address}</p> 
-                                </div>
-                            </div>
-                        </li>
-                    `;
-                    }
-                });
+                            </li>
+                        `;
+                        }
+                    });
+                }else{
+                    output = `<p>No Parties available<p>`;
+                }
                 document.getElementById("view_parties").innerHTML = output;
 
                 var edit_link = document.getElementsByClassName("btn-edit");
@@ -75,6 +79,9 @@ function load_parties() {
                     sessionStorage.removeItem("delete_party_msg");
                 }
 
+            }else{
+                console.log(parties.error);
+                confirm(parties.error);
             }
 
         })

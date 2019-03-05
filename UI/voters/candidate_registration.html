@@ -15,19 +15,16 @@
                 <div class="logo"><a href="../index.html">Politico</a></div>
                 <ul class="nav-items">
                     <li class="item">
-                        <a href="user_view_parties.html">View Parties</a>
+                        <a href="user_view_parties.html">Parties</a>
                     </li>
                     <li class="item">
-                        <a href="candidate_registration.html">Become a candidate</a>
-                    </li>
-                    <li class="item">
-                        <a href="user_view_candidates.html">View candidate</a>
+                        <a href="user_view_candidates.html">candidates</a>
                     </li>
                     <li class="item">
                         <a href="voting.html">Vote</a>
                     </li>
                     <li class="item">
-                        <a href="view_election_results.html">View election Results</a>
+                        <a href="view_election_results.html">election Results</a>
                     </li>
                     <li class="item">
                         <a href="my_profile.html">Profile</a>
@@ -39,67 +36,29 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="user_view_candidates.html" method="get">
+            <form action="user_view_candidates.html" method="post" name="candidate" onsubmit="return registerOffice()">
                 <div>
                     <h2>Enter Your Details</h2>
                 </div>
                 <div>
-                    <label for="fname">First name:</label>
-                    <input type="text" name="fname" id="fname">
+                    <label for="office">Choose Office:</label>
+                    <select type="text" value="" name="office" id="office" required>
+                        <option>-------- select office --------</option>
+                    </select>
                 </div>
                 <div>
-                    <label for="mname">MIddle name:</label>
-                    <input type="text" name="mname" id="mname">
+                    <label for="party">Choose Party:</label>
+                    <select type="text" value="" name="party" id="party" required>
+                        <option>-------- select party --------</option>
+                    </select>
                 </div>
-                <div>
-                    <label for="lname">Last name:</label>
-                    <input type="text" name="lname" id="lname">
-                </div>
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username">
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" id="email">
-                </div>
-                <div>
-                    <label for="county">County:</label>
-                    <input type="text" name="county" id="county">
-                </div>
-                <div>
-                    <label for="Constituency">Constituency:</label>
-                    <input type="text" name="Constituency" id="Constituency">
-                </div>
-                <div>
-                    <label for="ward">Ward:</label>
-                    <input type="text" name="ward" id="ward">
-                </div>
-                <div>
-                    <label for="party">Political Party:</label>
-                    <input type="text" name="party" id="party">
-                </div>
-                <div>
-                    <label for="age">Age:</label>
-                    <input type="text" name="age" id="age">
-                </div>
-                <div>
-                    <label for="position">Position Vying For:</label>
-                    <input type="text" name="position" id="position">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="text" id="password" name="password">
-                </div>
-                <button type="submit">Sign up</button>
-                <div>
-                    Do you have an a acount
-                    <a href="user_login.html">Sign In</a>
-                </div>
+                <button type="submit">Register</button>
+                <button type="text" id="btn-to-candidates">Back</button>
             </form>
         </div>
     </div>
     <script src="../static/js/index.js"></script>
+    <script src="../static/js/pages/candidate/candidate.js"></script>
 </body>
 
 </html>

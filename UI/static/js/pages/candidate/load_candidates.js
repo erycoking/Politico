@@ -41,25 +41,16 @@ function load_candidates() {
                                             var is_admin = sessionStorage.is_admin;
                                             if (is_admin == 'true') {
                                                 cand_output += `
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Photo</th>
-                                                            <th>Candidate</th>
-                                                            <th>Party Logo</th>
-                                                            <th>Party</th>
-                                                            <th>Office</th>
-                                                            <th>Action</th>
-                                                        </tr>
-                                                    </thead>
+                                                   
                                                     <tbody>
                                                     <tr>
-                                                        <td class="icon">
+                                                        <!--<td class="icon">
                                                             <img src="${candidate.candidate_photo_url}" alt="passport_url">
-                                                        </td>
+                                                        </td>-->
                                                         <td>${candidate.candidate}</td>
-                                                        <td class="icon">
+                                                        <!--<td class="icon">
                                                             <img src="${candidate.party_logo_url}" alt="jubilee_logo">
-                                                        </td>
+                                                        </td>-->
                                                         <td>${candidate.party}</td>
                                                         <td>${candidate.office}</td>
                                                         <td>
@@ -70,24 +61,16 @@ function load_candidates() {
                                                 `;
                                             } else {
                                                 cand_output += `
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Photo</th>
-                                                            <th>Candidate</th>
-                                                            <th>Party Logo</th>
-                                                            <th>Party</th>
-                                                            <th>Office</th>
-                                                        </tr>
-                                                    </thead>
+                                                    
                                                     <tbody>
                                                     <tr>
-                                                        <td class="icon">
+                                                        <!--<td class="icon">
                                                             <img src="${candidate.candidate_photo_url}" alt="passport_url">
-                                                        </td>
+                                                        </td>-->
                                                         <td>${candidate.candidate}</td>
-                                                        <td class="icon">
+                                                        <!--<td class="icon">
                                                             <img src="${candidate.party_logo_url}" alt="jubilee_logo">
-                                                        </td>
+                                                        </td>-->
                                                         <td>${candidate.party}</td>
                                                         <td>${candidate.office}</td>
                                                     </tr>
@@ -95,6 +78,39 @@ function load_candidates() {
                                                 `;
                                             }
                                         });
+
+                                        var cand_output_2 = '';
+                                        var is_admin_2 = sessionStorage.is_admin;
+                                        if (is_admin_2 == 'true') {
+                                            cand_output += `
+                                                <thead>
+                                                    <tr>
+                                                        <!--<th>Photo</th>-->
+                                                        <th>Candidate's Name</th>
+                                                        <!--<th>Party Logo</th>-->
+                                                        <th>Candidate's Party</th>
+                                                        <th>Office</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                            `;
+                                        } else {
+                                            cand_output += `
+                                                <thead>
+                                                    <tr>
+                                                        <!--<th>Photo</th>-->
+                                                        <th>Candidate's Name</th>
+                                                        <!--<th>Party Logo</th>-->
+                                                        <th>Candidate's Party</th>
+                                                        <th>Office</th>
+                                                    </tr>
+                                                </thead>
+                                            `;
+                                        }
+
+                                        cand_output_2 += cand_output;
+                                        cand_output = cand_output_2;
+
                                     } else {
                                         // no candidates found
                                         var is_admin = sessionStorage.is_admin;
@@ -112,6 +128,7 @@ function load_candidates() {
                                             `;
                                         }
                                     }
+                                    
                                     var table = document.createElement("table");
                                     var att = document.createAttribute("class"); // Create a "class" attribute
                                     att.value = "candidate-table";

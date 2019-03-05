@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politico | Candidates</title>
+    <title>Politico | Vote</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
@@ -42,15 +42,32 @@
             </nav>
         </header>
         <div class="main-content">
-            <div class="user-view-candidates">
-                <div class="candidate-list" id="candidate-list">
-                    <!-- load from js -->
-                </div>
+            <div>
+                <form action="#" method="post" name="petition" onsubmit="return save_petition()">
+                    <div>
+                        <h2>Enter Petition Details</h2>
+                    </div>
+                    <div>
+                        <label for="office">Choose Office:</label>
+                        <input type="text" name="office" id="office" disabled />
+                    </div>
+                    <div>
+                        <label for="complain">Complain</label>
+                        <textarea id="complain" name="complain" cols="30" rows="5" required></textarea>
+                    </div>
+                    <div id="evidence_div">
+                        <!-- <button onclick="addEvidenceInput()">Add More Evidence</button> -->
+                        <label for="evidence">Evidence</label>
+                        <textarea id="evidence" name="evidence" cols="30" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Save</button>
+                    <button type="text" id="btn-to-candidates" onclick="goBack()">Back</button>
+                </form>
             </div>
         </div>
     </div>
     <script src="../static/js/index.js"></script>
-    <script src="../static/js/pages/candidate/load_candidates.js"></script>
+    <script src="../static/js/pages/petitions/edit_petition.js"></script>
 </body>
 
 </html>

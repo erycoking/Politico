@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politico | Candidates</title>
+    <title>Politico | Petitions</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
@@ -15,25 +15,22 @@
                 <div class="logo"><a href="../index.html">Politico</a></div>
                 <ul class="nav-items">
                     <li class="item">
-                        <a href="admin_view_offices.html">Political Seats</a>
+                        <a href="user_view_parties.html">Parties</a>
                     </li>
                     <li class="item">
-                        <a href="admin_view_parties.html">Parties</a>
+                        <a href="user_view_candidates.html">candidates</a>
                     </li>
                     <li class="item">
-                        <a href="admin_view_candidates.html">Candidates</a>
+                        <a href="voting.html">Vote</a>
                     </li>
                     <li class="item">
-                        <a href="admin_voting.html">Vote</a>
+                        <a href="view_election_results.html">Election Results</a>
                     </li>
                     <li class="item">
-                        <a href="admin_view_election_results.html">Election Results</a>
+                        <a href="user_view_petitions.html">Petitions</a>
                     </li>
                     <li class="item">
-                        <a href="admin_view_petitions.html">Petitions</a>
-                    </li>
-                    <li class="item">
-                        <a href="admin_view_my_profile.html">Profile</a>
+                        <a href="my_profile.html">Profile</a>
                     </li>
                     <li class="item">
                         <a href="../index.html" class='btn-signup' id="signout"> Sign Out</a>
@@ -42,7 +39,14 @@
             </nav>
         </header>
         <div class="main-content">
-            <div class="user-view-candidates">
+            <div class="parties">
+                <div class="user-view-candidates">
+                    <div class="candidate-register">
+                        <div class="link">
+                            <a href="file_petition.html">File Petition</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="candidate-list" id="candidate-list">
                     <!-- load from js -->
                 </div>
@@ -50,7 +54,7 @@
         </div>
     </div>
     <script src="../static/js/index.js"></script>
-    <script src="../static/js/pages/candidate/load_candidates.js"></script>
+    <script src="../static/js/pages/petitions/load_petitions.js"></script>
 </body>
 
 </html>

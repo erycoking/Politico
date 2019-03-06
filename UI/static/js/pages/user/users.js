@@ -16,7 +16,7 @@ const passwd_pattern = /^.{8,}$/;
  */
 
 
-function userSignUp() { 
+function userSignUp() {
     var fname = document.forms.user.fname;
     var mname = document.forms.user.mname;
     var lname = document.forms.user.lname;
@@ -27,107 +27,126 @@ function userSignUp() {
     var idNo = document.forms.user.idNo;
     var passport_url = document.forms.user.passport_url;
     var phone_number = document.forms.user.phone_number;
-    
 
-    if (!name_pattern.test(fname.value)){
+
+    if (!name_pattern.test(fname.value)) {
         fname.focus();
         alert("Invalid first name.\nFirst name should only contain alpabets.\nFirst name should not be less than three characters.");
         return false;
     }
 
-    if (!name_pattern.test(lname.value)){
+    if (!name_pattern.test(lname.value)) {
         lname.focus();
         alert("Invalid last name.\nLast name should only contain alpabets.\nLast name should not be less than three characters.");
         return false;
     }
 
-    if (mname.value != ""){
-        if (!name_pattern.test(mname.value)){
+    if (mname.value != "") {
+        if (!name_pattern.test(mname.value)) {
             mname.focus();
             alert("Invalid middle name.\nMiddle name should only contain alpabets.\nMiddle name should not be less than three characters.");
             return false;
         }
     }
 
-    if (!username_pattern.test(username.value)){
+    if (!username_pattern.test(username.value)) {
         username.focus();
         alert("Invalid username.\nUsername can only contain alpabets, numbers and underscore.\nUsername name should not be less than three characters.");
         return false;
     }
 
-    if (!email_pattern.test(email.value)){
+    if (!email_pattern.test(email.value)) {
         email.focus();
         alert("Invalid email.\nPlease provide a valid email");
         return false;
     }
 
-    if (!idNo_pattern.test(idNo.value)){
+    if (!idNo_pattern.test(idNo.value)) {
         idNo.focus();
         alert("Invalid ID number.\nPlease provide a valid ID Number");
         return false;
     }
 
-    if (!image_url_pattern.test(passport_url.value)){
+    if (!image_url_pattern.test(passport_url.value)) {
         passport_url.focus();
         alert("Invalid passport url.\nPassport url should contain a valid domain and end with either jpg, jpeg or png.");
         return false;
     }
 
-    if (!phone_pattern.test(phone_number.value)){
+    if (!phone_pattern.test(phone_number.value)) {
         phone_number.focus();
         alert("Invalid phone number.\nPhone number should start with either '2547' or '07' followed by 8 digits. ");
         return false;
     }
 
-    if (!passwd_pattern.test(password.value)){
+    if (!passwd_pattern.test(password.value)) {
         password.focus();
         alert("Invalid password.\nPassword should be more than 8 characters long");
         return false;
     }
 
-    if (password.value != confirm_password.value){
+    if (password.value != confirm_password.value) {
         confirm_password.focus();
         alert("Passwords do not match!!!");
         return false;
     }
 
-    var user_data = {
-        "email": email.value,
-        "firstname": fname.value,
-        "id_no": idNo.value,
-        "lastname": lname.value,
-        "othername": mname.value,
-        "passport_url": passport_url.value,
-        "password": password.value,
-        "phone_number": phone_number.value,
-        "username": username.value
-    };
+    var user_data = ''
+    if (mname.value) {
+        user_data = {
+            "email": email.value,
+            "firstname": fname.value,
+            "id_no": idNo.value,
+            "lastname": lname.value,
+            "othername": mname.value,
+            "passport_url": passport_url.value,
+            "password": password.value,
+            "phone_number": phone_number.value,
+            "username": username.value
+        };
+    } else {
+        user_data = {
+            "email": email.value,
+            "firstname": fname.value,
+            "id_no": idNo.value,
+            "lastname": lname.value,
+            "passport_url": passport_url.value,
+            "password": password.value,
+            "phone_number": phone_number.value,
+            "username": username.value
+        };
+    }
 
     signup_url = "https://politico-api-version-2.herokuapp.com/api/v2/auth/signup";
     fetch(signup_url, {
-        method: 'POST', 
-        mode: "cors",
-        body: JSON.stringify(user_data), 
-        headers: {
-            'Content-type': 'application/json'
-        }
-    })
-    .then(res => res.json())
-    .then(user => {
-        if(user.status == 200){
-            sessionStorage.setItem('token', user.data[0].token);
-            sessionStorage.setItem('is_admin', user.data[0].user.is_admin);
-            location.replace("dashboard.html");
-        }else{
-            alert(user.error);
+            method: 'POST',
+            mode: "cors",
+            body: JSON.stringify(user_data),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        })
+        .then(res => res.json())
+        .then(user => {
+            if (user.status == 200) {
+                sessionStorage.setItem('token', user.data[0].token);
+                var current_user = JSON.stringify(user.data[0].user);
+                console.log(current_user);
+                sessionStorage.setItem('current_user', current_user);
+                var is_admin = user.data[0].user.is_admin;
+                sessionStorage.setItem('is_admin', is_admin);
+                // location.replace("dashboard.html");
+                location.replace("voters/dashboard.html");
+            } else {
+                alert(user.error);
+                return false;
+            }
+        })
+        .catch(e => {
+            console.log(e);
+            alert(e.message);
             return false;
-        }
-    })
-    .catch(e => {
-        console.log(e);
-        alert(e.message);
-        return false;
-    });
+        });
 
     return false;
 
@@ -138,11 +157,11 @@ function userSignUp() {
  * User login
  */
 
-function userLogin(){
+function userLogin() {
     username = document.forms.login.username;
     password = document.forms.login.password;
 
-    if (username && password){
+    if (username && password) {
         var user_credentials = {
             "username": username.value,
             "password": password.value
@@ -150,38 +169,38 @@ function userLogin(){
 
         login_url = "https://politico-api-version-2.herokuapp.com/api/v2/auth/login";
         fetch(login_url, {
-            method: 'POST', 
-            mode: "cors",
-            body: JSON.stringify(user_credentials), 
-            headers: {
-                'Content-type': 'application/json'
-            }
-        })
-        .then(res => res.json())
-        .then(user => {
-            if(user.status == 200){
-                sessionStorage.setItem('token', user.data[0].token);
-                var current_user = JSON.stringify(user.data[0].user);
-                console.log(current_user);
-                sessionStorage.setItem('current_user', current_user);
-                var is_admin = user.data[0].user.is_admin;
-                sessionStorage.setItem('is_admin', is_admin);
-                if (is_admin){
-                    location.replace("admin/admin_dashboard.html");
-                }else{
-                    location.replace("voters/dashboard.html");
+                method: 'POST',
+                mode: "cors",
+                body: JSON.stringify(user_credentials),
+                headers: {
+                    'Content-type': 'application/json'
                 }
-            }else{
-                alert(user.error);
-                return false;
-            }
-        })
-        .catch(e => {
-            console.log(e);
-            confirm(e.message);
-        });
+            })
+            .then(res => res.json())
+            .then(user => {
+                if (user.status == 200) {
+                    sessionStorage.setItem('token', user.data[0].token);
+                    var current_user = JSON.stringify(user.data[0].user);
+                    console.log(current_user);
+                    sessionStorage.setItem('current_user', current_user);
+                    var is_admin = user.data[0].user.is_admin;
+                    sessionStorage.setItem('is_admin', is_admin);
+                    if (is_admin) {
+                        location.replace("admin/admin_dashboard.html");
+                    } else {
+                        location.replace("voters/dashboard.html");
+                    }
+                } else {
+                    alert(user.error);
+                    return false;
+                }
+            })
+            .catch(e => {
+                console.log(e);
+                confirm(e.message);
+            });
         return false;
-    }else{
+    } else {
         alert("Both username and password are required");
         return false;
     }

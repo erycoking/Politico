@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politico | Profile | Edit</title>
+    <title>Politico | Petitions</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
@@ -39,39 +39,34 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="my_profile.html" method="get">
-                <div>
-                    <h2>Sign Up</h2>
-                </div>
-                <div>
-                    <label for="fname">First name:</label>
-                    <input type="text" name="fname" id="fname" required>
-                </div>
-                <div>
-                    <label for="mname">Middle name:</label>
-                    <input type="text" name="mname" id="mname">
-                </div>
-                <div>
-                    <label for="lname">Last name:</label>
-                    <input type="text" name="lname" id="lname" required>
-                </div>
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" id="email" required>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="text" id="password" name="password">
-                </div>
-                <button type="submit">Sign up</button>
-            </form>
+            <div>
+                <form action="#" method="post" name="petition" onsubmit="return save_petition()">
+                    <div>
+                        <h2>Enter Petition Details</h2>
+                    </div>
+                    <div>
+                        <label for="office">Choose Office:</label>
+                        <select type="text" value="" name="office" id="office" required>
+                            <option>-------- select office --------</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="complain">Complain</label>
+                        <textarea id="complain" name="complain" cols="30" rows="5" required></textarea>
+                    </div>
+                    <div id="evidence_div">
+                        <!-- <button onclick="addEvidenceInput()">Add More Evidence</button> -->
+                        <label for="evidence">Evidence</label>
+                        <textarea id="evidence" name="evidence" cols="30" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Save</button>
+                    <button type="text" id="btn-to-candidates" onclick="goBack()">Back</button>
+                </form>
+            </div>
         </div>
     </div>
     <script src="../static/js/index.js"></script>
+    <script src="../static/js/pages/petitions/petition.js"></script>
 </body>
 
 </html>

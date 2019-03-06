@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politico | Sign Up</title>
+    <title>Politico | Profile</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 
@@ -30,6 +30,9 @@
                         <a href="admin_view_election_results.html">Election Results</a>
                     </li>
                     <li class="item">
+                        <a href="admin_view_petitions.html">Petitions</a>
+                    </li>
+                    <li class="item">
                         <a href="admin_view_my_profile.html">Profile</a>
                     </li>
                     <li class="item">
@@ -44,47 +47,31 @@
                     <div class="profile-table">
                         <table>
                             <tr>
-                                <th>Username: </th>
-                                <td>Erycoking</td>
-                            </tr>
-                            <tr>
                                 <th>Name: </th>
-                                <td>Erick Loningo lomunyak</td>
+                                <td id="fullname"></td>
                             </tr>
                             <tr>
                                 <th>Email: </th>
-                                <td>Erycoking@king.com</td>
+                                <td id="email"></td>
                             </tr>
                             <tr>
-                                <th>Gender: </th>
-                                <td>Male</td>
+                                <th>ID Number: </th>
+                                <td id="id_no"></td>
                             </tr>
                             <tr>
-                                <th>Age: </th>
-                                <td>21</td>
+                                <th>Passport URL: </th>
+                                <td id="passport_url">Male</td>
                             </tr>
                             <tr>
-                                <th>County: </th>
-                                <td>Kajiado</td>
-                            </tr>
-                            <tr>
-                                <th>Constituency: </th>
-                                <td>Kajiado South</td>
-                            </tr>
-                            <tr>
-                                <th>Ward: </th>
-                                <td>kuku</td>
-                            </tr>
-                            <tr>
-                                <td colspan="2" class="profile-link">
-                                    <a href="edit_my_info.html">Edit Profile</a>
-                                </td>
+                                <th>Username: </th>
+                                <td id="username">21</td>
                             </tr>
                         </table>
                     </div>
                 </div>
             </div>
-    <script src="../static/js/index.js"></script>
+            <script src="../static/js/index.js"></script>
+            <script src="../static/js/pages/profile/load_profile.js"></script>
 </body>
 
 </html>

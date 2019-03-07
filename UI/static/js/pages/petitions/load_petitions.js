@@ -57,15 +57,18 @@ function load_petitions() {
                                                                 </div>
                                                                 <div>
                                                                     <p><strong>Filed By: </strong> ${pet.created_by}</p>
-                                                                    <p><strong>Filed On: </strong>${pet.created_on}</p>
-                                                                    <p><strong>Allegations: </strong>${pet.created_by}</p>
+                                                                    <p><strong>On: </strong>${pet.created_on}</p>
+                                                                    <div>
+                                                                        <h4>Complain</h4>
+                                                                        <div>${pet.body}</div>
+                                                                    </div>
                                                                     <div>
                                                                         <h4>Evidence</h4>
                                                                         <div>${pet.evidence[0]}</div>
                                                                     </div>
                                                                     <div>
-                                                                    <a href="https://politico-api-version-2.herokuapp.com/api/v2/petitions/${pet.id}" class="btn-edit">Edit</a>
-                                                                    <a href="https://politico-api-version-2.herokuapp.com/api/v2/petitions/${pet.id}" class="btn-delete">Delete</a>
+                                                                        <a href="https://politico-api-version-2.herokuapp.com/api/v2/petitions/${pet.id}" class="btn-edit">Edit</a>
+                                                                        <a href="https://politico-api-version-2.herokuapp.com/api/v2/petitions/${pet.id}" class="btn-delete">Delete</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -78,8 +81,11 @@ function load_petitions() {
                                                                 </div>
                                                                 <div>
                                                                     <p><strong>Filed By: </strong> ${pet.created_by}</p>
-                                                                    <p><strong>Filed On: </strong>${pet.created_on}</p>
-                                                                    <p><strong>Allegations: </strong>${pet.created_by}</p>
+                                                                    <p><strong>On: </strong>${pet.created_on}</p>
+                                                                    <div>
+                                                                        <h4>Complain</h4>
+                                                                        <div>${pet.body}</div>
+                                                                    </div>
                                                                     <div>
                                                                         <h4>Evidence</h4>
                                                                         <div>${pet.evidence[0]}</div>

@@ -15,10 +15,12 @@ function load_candidates() {
         })
         .then(res => res.json())
         .then(offices => {
+            document.getElementById("candidate-list").innerHTML = '';
             if (offices.status == 200) {
                 var final_cand_output = '';
                 var data = offices.data;
                 if (data.length > 0) {
+                    
                     var cand_output_table = '';
                     data.forEach(function (office) {
                         var cand_url = "https://politico-api-version-2.herokuapp.com/api/v2/office/" + office.id + "/candidates";

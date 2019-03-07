@@ -36,6 +36,14 @@ function loadOffices() {
 
 function load_candidates_for_voting() {
 
+    var spinner = '';
+    spinner = `
+        <p><img src="../static/img/gifs/Spinner-1s-200px.gif"></p>
+    `;
+    var div2 = document.createElement("div");
+    div2.innerHTML = spinner;
+    document.getElementById("candidate-list").appendChild(div2);
+
     var office = document.forms.vote.office;
 
     if (office.selectedIndex < 1) {
@@ -60,6 +68,7 @@ function load_candidates_for_voting() {
         })
         .then(res => res.json())
         .then(cand => {
+            document.getElementById("candidate-list").innerHTML = '';
             if (cand.status == 200) {
                 var cand_output = '';
                 data = cand.data;
@@ -196,3 +205,5 @@ function vote(e) {
     }
 
 }
+
+

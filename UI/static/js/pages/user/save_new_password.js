@@ -1,8 +1,8 @@
 function save_new_password() {
 
-    var email = document.forms.password.email;
-    var password = document.forms.password.password;
-    var cpassword = document.forms.password.cpassword;
+    var email = document.forms.passwd.email;
+    var password = document.forms.passwd.password;
+    var cpassword = document.forms.passwd.cpassword;
 
     if (email.value == '') {
         alert('Email is required');
@@ -19,10 +19,16 @@ function save_new_password() {
         return false;
     }
 
-    if (password.value == cpassword.value) {
+    if (password.value != cpassword.value) {
         alert('Passwords do not match');
         return false;
     }
+
+    var spinner = '';
+    spinner = `
+        <p><img src="static/img/gifs/Spinner-1s-200px.gif"></p>
+    `;
+    document.getElementById("main-content").innerHTML = spinner;
 
     var passwd_body = {
         "email": email.value, 

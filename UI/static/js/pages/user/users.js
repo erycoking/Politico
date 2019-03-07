@@ -117,6 +117,12 @@ function userSignUp() {
         };
     }
 
+    var spinner = '';
+    spinner = `
+        <p><img src="static/img/gifs/Spinner-1s-200px.gif"></p>
+    `;
+    document.getElementById("main-content").innerHTML = spinner;
+
     signup_url = "https://politico-api-version-2.herokuapp.com/api/v2/auth/signup";
     fetch(signup_url, {
             method: 'POST',
@@ -166,6 +172,12 @@ function userLogin() {
             "username": username.value,
             "password": password.value
         };
+
+        var spinner = '';
+        spinner = `
+            <p><img src="static/img/gifs/Spinner-1s-200px.gif"></p>
+        `;
+        document.getElementById("main-content").innerHTML = spinner;
 
         login_url = "https://politico-api-version-2.herokuapp.com/api/v2/auth/login";
         fetch(login_url, {

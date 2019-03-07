@@ -14,6 +14,7 @@ function load_parties() {
         })
         .then(res => res.json())
         .then(parties => {
+            document.getElementById("view_parties").innerHTML = '';
             if (parties.status == 200) {
                 var output = '';
                 data = parties.data;

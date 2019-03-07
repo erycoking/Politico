@@ -25,8 +25,8 @@ function load_offices() {
                             <tr>
                                 <td>${office.name}</td>
                                 <td>${office.type}</td>
-                                <td>
-                                    <a href="https://politico-api-version-2.herokuapp.com/api/v2/offices/${office.id}" class="btn-edit">Edit</a>  |
+                                <td class="link">
+                                    <a href="https://politico-api-version-2.herokuapp.com/api/v2/offices/${office.id}" class="btn-edit">Edit</a>  
                                     <a href="https://politico-api-version-2.herokuapp.com/api/v2/offices/${office.id}" class="btn-delete">Delete</a>
                                 </td>
                             </tr>

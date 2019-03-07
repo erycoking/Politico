@@ -52,7 +52,7 @@ function load_candidates() {
                                                             <img src="${candidate.party_logo_url}" alt="jubilee_logo">
                                                         </td>-->
                                                         <td>${candidate.party}</td>
-                                                        <td>${candidate.office}</td>
+                                                        <!-- <td>${candidate.office}</td> -->
                                                         <td>
                                                             <a href="https://politico-api-version-2.herokuapp.com/api/v2/office/${office.id}/candidates/${candidate.id}" class="btn-delete">Delete</a>
                                                         </td>
@@ -72,7 +72,7 @@ function load_candidates() {
                                                             <img src="${candidate.party_logo_url}" alt="jubilee_logo">
                                                         </td>-->
                                                         <td>${candidate.party}</td>
-                                                        <td>${candidate.office}</td>
+                                                        <!-- <td>${candidate.office}</td> -->
                                                     </tr>
                                                     </tbody>
                                                 `;
@@ -89,7 +89,7 @@ function load_candidates() {
                                                         <th>Candidate's Name</th>
                                                         <!--<th>Party Logo</th>-->
                                                         <th>Candidate's Party</th>
-                                                        <th>Office</th>
+                                                        <!--<th>Office</th>
                                                         <th>Action</th>
                                                     </tr>
                                                 </thead>
@@ -102,7 +102,7 @@ function load_candidates() {
                                                         <th>Candidate's Name</th>
                                                         <!--<th>Party Logo</th>-->
                                                         <th>Candidate's Party</th>
-                                                        <th>Office</th>
+                                                        <!--<th>Office</th>-->
                                                     </tr>
                                                 </thead>
                                             `;
@@ -142,6 +142,7 @@ function load_candidates() {
                                     // console.log(type);
 
                                     var div3 = document.createElement("div");
+                                    var div4 = document.createElement("div");
                                     var div = document.createElement("div");
                                     var inner_div = document.createElement("div");
                                     var h4 = document.createElement("h4");
@@ -151,9 +152,13 @@ function load_candidates() {
                                     inner_div.appendChild(h4);
                                     div.appendChild(inner_div);
                                     div3.appendChild(div);
+                                    var scroll = document.createAttribute("class");
+                                    scroll.value = "scroll-table";
+                                    div4.setAttributeNode(scroll);
+                                    div4.appendChild(cand_output_table);
                                     // console.log(div);
 
-                                    div3.appendChild(cand_output_table);
+                                    div3.appendChild(div4);
                                     document.getElementById("candidate-list").appendChild(div3);
 
                                     var delete_link = document.getElementsByClassName("btn-delete");

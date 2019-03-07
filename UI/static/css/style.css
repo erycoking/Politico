@@ -7,6 +7,7 @@ body {
     color: #fff;
     width: 100%;
     background-color: royalblue;
+    /* overflow-x: hidden; */
 }
 
 label {
@@ -44,6 +45,7 @@ header {
     background: #333;
     color: #fff;
     width: 100%;
+    display: block;
 }
 
 form {
@@ -95,32 +97,32 @@ button, .btn {
 }
 
 .main-nav .logo {
-    float: left;
+    display: block;
     font-weight: bold;
     font-style: italic;
-
 }
 
+
 .main-nav .nav-items {
-    float: right;
-    display: flex;
-    flex-wrap: wrap;
+    float: left;
+    display: block;
     list-style-type: none;
     text-decoration: none;
 }
 
+
 .main-nav .nav-items .item {
     align-content: center;
-    padding: 0 1em;
+    padding: 0 0.5em;
 }
 
 .main-nav a {
     background: #333;
     color: #fff;
-    padding: 0.5em 1.5em;
+    padding: 0.5em 0.7em;
+    display: block;
     border-radius: 5px 0 0 5px;
     text-decoration: none;
-    border-right: 2px solid #fff;
 }
 
 .main-nav a:hover {
@@ -157,98 +159,12 @@ button, .btn {
 }
 
 
-/* styling voting page */
-
-.voting .voting-form {
-    border: 1px solid #333;
-    padding: 1em;
-    margin: 0;
-    justify-content: center;
-    color: #fff;
-    background: #333;
-    border-radius: 10px;
-    position: relative;
-}
-
-.voting .voting-form .post {
-    border-bottom: 1px solid #000;
-    margin-bottom: 1em;
-}
-
-.voting .voting-form .post .post-title {
-    text-align: center;
-}
-
-.voting .voting-form .post .candidates ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-}
-
-.voting .voting-form .post .candidates ul .box {
-    width: 90%;
-    display: flex;
-    flex-direction: column;
-    outline: 1px solid #000;
-    outline: visible;
-    justify-content: center;
-    margin: 0;
-}
-
-.voting .voting-form .post .candidates ul .box .box-header {
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
-
-.voting .voting-form .post .candidates ul .box .avater {
-    flex: 1;
-}
-
-.voting .voting-form .post .candidates ul .box .avater img {
-    width: 200px;
-    height: 200px;
-}
-
-.voting .voting-form .post .candidates ul .box .choice {
-    flex: 1;
-    display: flex;
-    align-items: center;
-}
-
-.voting .voting-form .post .candidates ul .box .choice input {
-    flex: 1;
-}
-
-.voting .voting-form .post .candidates ul .box .choice span {
-    flex: 5;
-}
-
-.voting .voting-form p {
-    float: right;
-}
-
-.voting .voting-form p input {
-    border-bottom: 0;
-    width: 150px;
-    background: #00cc66;
-    padding: 1em;
-    border-radius: 5px;
-    text-align: center;
-}
-
-
 /* styling main-content area */
 
 .main-content {
     align-self: center;
-    margin: 0;
     text-align: center;
-    width: 100%;
-    height: 100vh;
     position: relative;
-    padding: 1em;
 }
 
 
@@ -267,22 +183,25 @@ button, .btn {
 /* profile page */
 
 .main-content .profile{
+    display: block;
     background: #333;
     color: #fff;
     justify-content: left;
+    padding: 1em;
+    margin: 2em 0em;
 }
 
 .main-content .profile .profile-table table{
-    width: 60vw;
     text-align: left;
-    padding-left: 5em;
-    padding-bottom: 2em;
-
 }
 
 .main-content .profile .profile-table table tr{
     border: 1px solid #000;
     height: 2em;
+}
+
+.main-content .profile .profile-table table tr td{
+    padding: 0em .5em;
 }
 
 .main-content .profile .profile-table table tr .profile-link{
@@ -316,48 +235,31 @@ button, .btn {
 
 .parties ul li {
     list-style: none;
+    padding: .3em;
+    margin: 1em 0em;
+    background: #333;
+    color: #fff;
+    display: block;
 }
 
 
 .party {
-    width: 80vw;
-    max-height: 150px;
+    /* width: 100vw; */
     background: #333;
     color: #fff;
-    display: flex;
+    display: block;
+    margin-top: 1em;
 }
 
 .party img {
-    height: 100px;
-    width: 100px;
-}
-
-.party .icon {
-    flex: 1;
-    justify-content: flex-start;
-}
-
-.party .desc {
-    flex: 1;
-    justify-content: center;
-}
-
-.party .join {
-    flex: 1;
-    justify-content: flex-end;
-
-}
-
-.party div {
-    float: left;
+    height: 70px;
+    width: 70px;
 }
 
 .options a {
-    display: block;
     padding: .3em 0;
-    margin: 1em;
+    margin: 1em 0em;
     border-radius: 5px;
-    color: #fff;
     text-decoration: none;
     width: 100px;
 }
@@ -370,122 +272,6 @@ button, .btn {
     background: #F02421;
 }
 
-/* election result view styling */
-
-.voting .voting-form .result .post {
-    border: 1px solid #000;
-}
-
-.voting .voting-form .post .candidates .polls {
-    display: flex;
-    flex-direction: column
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result {
-    display: flex;
-    align-content: center;
-
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result h4 {
-    text-align: center;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results {
-    flex-grow: 1/1;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul {
-    flex-grow: 1/1;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li {
-    flex-grow: 1/1;
-    display: flex;
-    align-content: center;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant {
-    flex-grow: 1/1;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: space-around;
-    padding-left: 2em;
-    padding-top: 0;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-avater {
-    flex: 1;
-    align-content: center;
-    justify-content: center;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-name {
-    flex: 1;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-score {
-    flex: 1;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant h4 {
-    flex: 1;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant .contestant-score h4 {
-    margin-top: 0;
-    padding-top: 0;
-    ;
-}
-
-
-
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    outline: visible;
-    border: 1px solid #000;
-    padding: 1em;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-header {
-    flex: 2;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater {
-    flex: 1;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .candidate-name {
-    flex: 1;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .heading {
-    font-style: oblique
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .candidate-chosen .avater img {
-    width: 100px;
-    height: 100px;
-}
-
-.voting .voting-form .post .candidates ul .elections .vote-cast-result .election-results ul li .contestant-avater img {
-    width: 50px;
-    height: 50px;
-}
 
 
 /* candidate view page */
@@ -495,7 +281,11 @@ button, .btn {
     height: 50px;
 }
 
-.candidate-list .candidate-table {
+.scroll-table{
+    overflow-x:auto;
+}
+
+.candidate-list .candidate-table{
     background: #333;
     color: #fff;
     margin: 1em;
@@ -520,22 +310,61 @@ button, .btn {
 }
 
 
-
 .candidate-list .candidate-table tr td {
     margin: 1em;
     padding: 1em;
 }
 
+a.btn-delete,  a.btn-edit {
+    padding: 0.5em;
+    color: #fff;
+    background: #990099;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.user-view-candidates .candidate-list .candidate-table {
+    background: #333;
+    color: #fff;
+    margin: 1em;
+    padding: 2em;
+    /* width: 90vw; */
+    border-radius: 5px;
+    table-layout: auto;
+    overflow-x:auto;
+}
+
+.user-view-candidates .candidate-register {
+    width: 90vw;
+    padding: 1em;
+    margin: 2em 1em;
+}
+
+.user-view-candidates .candidate-list .office-list .link a{
+    display: block;
+    padding: .3em 0;
+    margin: .3em;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 100px;
+}
+
+.user-view-candidates .candidate-register .link {
+    display: block;
+}
+
+.user-view-candidates .candidate-register .link a {
+    padding: 1em;
+    color: #fff;
+    background: #990099;
+    border-radius: 5px;
+    text-decoration: none;
+    width: 100vh;
+}
 
 /* responsiveness */
 
-@media(min-width: 700px) {
-    header {
-        display: block;
-        color: #fff;
-        background: #333;
-    }
-
+@media(min-width: 768px) {
     form {
         width: 450px;
     }
@@ -544,43 +373,17 @@ button, .btn {
         width: 900px;
     }
 
-    .main-nav {
-        display: inline-block;
-        width: 100%;
-    }
-
     .main-nav .logo {
-        padding: 0 1em;
         float: left;
-        font-weight: bold;
-        font-style: italic;
-
     }
 
     .main-nav .nav-items {
         float: right;
         display: flex;
-        list-style-type: none;
-        text-decoration: none;
-    }
-
-    .main-nav .nav-items .item {
-        align-content: center;
-        margin-left: 0;
     }
 
     .main-nav a {
-        background: #333;
-        color: #fff;
-        padding: 0.5em 1.5em;
-        border-radius: 5px 0 0 5px;
-        text-decoration: none;
         border-right: 2px solid #fff;
-    }
-
-    .main-nav a:hover {
-        background: #fff;
-        color: #333;
     }
 
 
@@ -610,6 +413,45 @@ button, .btn {
         height: auto;
     }
 
+    .main-content .profile .profile-table table{
+        width: 80vw;
+    }
+
+    .parties ul li {
+        padding: .5em 2em;
+        margin-top: 2em;
+    }
+
+    .party {
+        width: 50vw;
+        display: flex;
+    }
+
+    .party img {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .party .icon {
+        flex: 1;
+        justify-content: flex-start;
+    }
+    
+    .party .desc {
+        flex: 1;
+        justify-content: center;
+    }
+    
+    .party .join {
+        flex: 1;
+        justify-content: flex-end;
+    
+    }
+    
+    .options a {
+        display: block;
+    }
+
     /* candidate view page */
 
     .candidate-list .candidate-table img {
@@ -618,43 +460,22 @@ button, .btn {
     }
 
     .user-view-candidates .candidate-list .candidate-table {
-        background: #333;
-        color: #fff;
-        margin: 1em;
-        padding: 2em;
         width: 90vw;
-        border-radius: 5px;
-        table-layout: auto;
     }
 
-    .user-view-candidates .candidate-register {
-        width: 90vw;
-        padding: 1em;
-        margin: 2em 1em;
-    }
-
-    .user-view-candidates .candidate-register .link {
-        display: block;
-    }
-
-    .user-view-candidates .candidate-register .link a {
-        padding: 1em;
-        color: #fff;
-        background: #990099;
+    .user-view-candidates .candidate-list .office-list .link a{
+        padding: .3em 0;
+        margin: .3em;
         border-radius: 5px;
         text-decoration: none;
-        width: 100vh;
+        width: 100px;
+        float: left;
+        /* display: inline; */
     }
 
     .main-content .partiesu ul{
         width: 70vw
     }
 
-    a.btn-delete,  a.btn-edit {
-        padding: 0.5em;
-        color: #fff;
-        background: #990099;
-        border-radius: 5px;
-        text-decoration: none;
-    }
+    
 }

@@ -14,6 +14,7 @@ function load_offices() {
         })
         .then(res => res.json())
         .then(offices => {
+            document.getElementById("view_offices").innerHTML = '';
             if (offices.status == 200) {
                 var output = '';
                 data = offices.data;

@@ -1,8 +1,9 @@
 function send_reset_link() {
 
-    var email = document.forms.password_reset.email;
+    
+    var email = document.forms.passwd.email;
     if (email.value == '') {
-        alert('Email is required')
+        alert('Email is required');
         return false;
     }
 
@@ -10,6 +11,13 @@ function send_reset_link() {
         "email": email.value
     };
     var reset_url = "https://politico-api-version-2.herokuapp.com/api/v2/auth/reset";
+
+    var spinner = '';
+    spinner = `
+        <p><img src="static/img/gifs/Spinner-1s-200px.gif"></p>
+    `;
+    document.getElementById("main-content").innerHTML = spinner;
+
 
     fetch(reset_url, {
             method: 'POST',
@@ -26,12 +34,13 @@ function send_reset_link() {
                 history.back();
             }else{
                 alert(result.error);
-                return false;
+                history.back();
             }
         })
         .catch(e => {
-            console.log(e);
+            console.log(e.message);
             confirm(e.message);
+            history.back();
         });
 
     return false;

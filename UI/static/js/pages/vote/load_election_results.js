@@ -19,6 +19,7 @@ function load_votes() {
                 var final_cand_output = '';
                 var data = offices.data;
                 if (data.length > 0) {
+                    document.getElementById("candidate-list").innerHTML = '';
                     var cand_output_table = '';
                     data.forEach(function (office) {
 
@@ -48,7 +49,7 @@ function load_votes() {
                             })
                             .then(res => res.json())
                             .then(results => {
-
+                                
 
                                 if (results.status == 200) {
                                     var results_output = '';

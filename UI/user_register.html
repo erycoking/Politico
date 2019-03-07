@@ -24,55 +24,57 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="voters/dashboard.html" method="POST" name="user" onsubmit="return userSignUp()">
-                <div>
-                    <h2>Sign Up</h2>
-                </div>
-                <div>
-                    <label for="fname">First name:</label>
-                    <input type="text" name="fname" id="fname" required>
-                </div>
-                <div>
-                    <label for="mname">Middle name:</label>
-                    <input type="text" name="mname" id="mname">
-                </div>
-                <div>
-                    <label for="lname">Last name:</label>
-                    <input type="text" name="lname" id="lname" required>
-                </div>
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input type="text" name="email" id="email" required>
-                </div>
-                <div>
-                    <label for="idNo">ID Number:</label>
-                    <input type="text" name="idNo" id="idNo" required>
-                </div>
-                <div>
-                    <label for="passport_url">Passport URL:</label>
-                    <input type="text" name="passport_url" id="passport_url" required placeholder="eg. http://passports.com/passport199.png">
-                </div>
-                <div>
-                    <label for="phone_number">Phone Number:</label>
-                    <input type="text" name="phone_number" id="phone_number" required placeholder="eg. 254734567876">
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <div>
-                    <label for="cpassword">Confirm Password</label>
-                    <input type="password" id="cpassword" name="cpassword" required>
-                </div>
-                <button type="submit">Sign up</button>
-                <p>
-                    Do you have an acount<p><a href="user_login.html" class=" button-btn btn">Sign In</a></p>
-                </p>
-            </form>
+            <div id="main-content">
+                <form action="voters/dashboard.html" method="POST" name="user" onsubmit="return userSignUp()">
+                    <div>
+                        <h2>Sign Up</h2>
+                    </div>
+                    <div>
+                        <label for="fname">First name:</label>
+                        <input type="text" name="fname" id="fname" required>
+                    </div>
+                    <div>
+                        <label for="mname">Middle name:</label>
+                        <input type="text" name="mname" id="mname">
+                    </div>
+                    <div>
+                        <label for="lname">Last name:</label>
+                        <input type="text" name="lname" id="lname" required>
+                    </div>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="text" name="email" id="email" required>
+                    </div>
+                    <div>
+                        <label for="idNo">ID Number:</label>
+                        <input type="text" name="idNo" id="idNo" required>
+                    </div>
+                    <div>
+                        <label for="passport_url">Passport URL:</label>
+                        <input type="text" name="passport_url" id="passport_url" required placeholder="eg. http://passports.com/passport199.png">
+                    </div>
+                    <div>
+                        <label for="phone_number">Phone Number:</label>
+                        <input type="text" name="phone_number" id="phone_number" required placeholder="eg. 254734567876">
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" id="cpassword" name="cpassword" required>
+                    </div>
+                    <button type="submit">Sign up</button>
+                    <p>
+                        Do you have an acount<p><a href="user_login.html" class=" button-btn btn">Sign In</a></p>
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
     <script src="static/js/pages/user/users.js"></script>

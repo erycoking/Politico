@@ -24,26 +24,28 @@
             </nav>
         </header>
         <div class="main-content">
-            <form action="voters/dashboard.html" method="POST" class="login-form" name="login" onsubmit="return userLogin()">
-                <div>
-                    <h2 class="login-title">Sign In</h2>
-                </div>
-                <div>
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" required>
-                </div>
-                <div>
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" required>
-                </div>
-                <p>
-                    <button type="submit" class="btn-submit">Sign in</button>
-                    <a href="request_new_password.html" class="button-btn btn">Forgot password</a>
-                </p>
-                <p>
-                    Don't have an a acount<p><a href="user_register.html" class="button-btn btn">Sign Up</a></p>
-                </p>
-            </form>
+            <div id="main-content">
+                <form action="voters/dashboard.html" method="POST" class="login-form" name="login" onsubmit="return userLogin()">
+                    <div>
+                        <h2 class="login-title">Sign In</h2>
+                    </div>
+                    <div>
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <p>
+                        <button type="submit" class="btn-submit">Sign in</button>
+                        <a href="request_new_password.html" class="button-btn btn">Forgot password</a>
+                    </p>
+                    <p>
+                        Don't have an a acount<p><a href="user_register.html" class="button-btn btn">Sign Up</a></p>
+                    </p>
+                </form>
+            </div>
         </div>
 
     </div>

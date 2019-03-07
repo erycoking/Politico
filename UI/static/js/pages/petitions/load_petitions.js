@@ -17,6 +17,7 @@ function load_petitions() {
         })
         .then(res => res.json())
         .then(offices => {
+            document.getElementById("candidate-list").innerHTML = '';
             if (offices.status == 200) {
                 var final_cand_output = '';
                 var data = offices.data;
@@ -38,6 +39,7 @@ function load_petitions() {
                             })
                             .then(res => res.json())
                             .then(petitions => {
+                                
                                 if (petitions.status == 200) {
                                     var cand_output = '';
                                     data = petitions.data;
